@@ -29,8 +29,8 @@
                 <span class="navbar-text">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li><img src="/public/img/user.png" alt="user"></li>
-                        <li class="nav-item"><a class="nav-link active" href="#" onclick="route('signin')">Login/Cerrar Sesión</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="#" onclick="route('signin')">Login/Cerrar
+                                Sesión</a></li>
                     </ul>
 
                 </span>
@@ -45,17 +45,17 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#control" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Tablero de control
+                                    data-bs-target="#consultores" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Consultores
                                 </button>
                             </h2>
-                            <div id="control" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            <div id="consultores" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                        <li>A</li>
-                                        <li>B</li>
-                                        <li>C</li>
+                                        <li>Lista de consultores</li>
+                                        <li>Añadir consultor</li>
                                     </ul>
                                 </div>
                             </div>
@@ -63,17 +63,15 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#ordenes" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Ordenes
+                                    data-bs-target="#tareas" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Tickets
                                 </button>
                             </h2>
-                            <div id="ordenes" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            <div id="tareas" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                        <li class="nav-item"><a class="nav-link" href="#">Obtener ordenes</a></li>
-                                        <li>B</li>
-                                        <li>C</li>
+                                        <li>Ver tickets</li>
                                     </ul>
                                 </div>
                             </div>
@@ -83,14 +81,62 @@
             </div>
         </div>
     </div>
-    <div class="container container-sidenav">
+    <div class="container-fluid container-sidenav">
         <div class="row p-5">
-            <div class="col">
+            <div class="col card-login">
+                <h2>Consultores</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Proyecto</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Jorge</td>
+                            <td>Laverde</td>
+                            <td>Activo</td>
+                            <td>VTEX</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Juan</td>
+                            <td>Cardona</td>
+                            <td>Activo</td>
+                            <td>Backend</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Angie</td>
+                            <td>Gordillo</td>
+                            <td>Inactivo</td>
+                            <td>Chatbot</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class="col-1">
 
 
             </div>
             <div class="col card-login">
-                <h2>Crear Cuenta</h2>
+                <h2>Nuevo Consultor</h2>
+
                 <div class="row">
                     <div class="col">
                         <label for="">Nombre</label>
@@ -101,33 +147,52 @@
                         <input type="text" name="" class="form-control">
                     </div>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col">
-                        <label for="">Teléfono</label>
+                        <label for=""># de documento</label>
                         <input type="text" name="" class="form-control">
                     </div>
                     <div class="col">
-                        <label for="">Correo Electrónico</label>
+                        <label for="">Proyecto</label>
                         <input type="text" name="" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="">Contraseña</label>
-                        <input type="password" name="" class="form-control">
-                    </div>
-                    <div class="col">
-                        <label for="">Repetir Contraseña</label>
-                        <input type="password" name="" class="form-control">
                     </div>
                 </div>
                 <br>
-
-                <input type="button" value="Crear Cuenta" class="btn btn-primary">
-                <input type="button" value="Cancelar" onclick="route('signin')" class="btn btn-danger">
+                <input type="button" value="Crear" class="btn btn-success">
+                <input type="button" value="Limpiar"  class="btn btn-primary">
 
             </div>
 
+        </div>
+        <div class="row p-5">
+            <div class="col card-login">
+                <h2>Tickets</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#Ticket</th>
+                            <th scope="col">Asunto</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Responsable</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">123123123</th>
+                            <td>Error factura</td>
+                            <td>25/05/2021</td>
+                            <td>Abierto</td>
+                            <td>Jorge</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
         </div>
     </div>
 
