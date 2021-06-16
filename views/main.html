@@ -16,7 +16,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" onclick="route('main')"><img src="/public/img/logomqa.png" height="40" alt="logo MQA"></a>
+            <a class="navbar-brand" onclick="route('main')"><img src="/public/img/logomqa.png" height="40"
+                    alt="logo MQA"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,7 +29,8 @@
                 <span class="navbar-text">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li><img src="/public/img/user.png" alt="user" onclick="route('adminaccount')"></li>
-                        <li class="nav-item"><a class="nav-link active" href="#" onclick="route('signin')">Login/Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#" onclick="route('signin')">Login/Cerrar
+                                Sesión</a></li>
                     </ul>
 
                 </span>
@@ -42,7 +44,8 @@
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#control" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#control" aria-expanded="false" aria-controls="flush-collapseOne">
                                     Tablero de control
                                 </button>
                             </h2>
@@ -50,7 +53,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                        <li >A</li>
+                                        <li>A</li>
                                         <li>B</li>
                                         <li>C</li>
                                     </ul>
@@ -59,7 +62,8 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordenes" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ordenes" aria-expanded="false" aria-controls="flush-collapseOne">
                                     Ordenes
                                 </button>
                             </h2>
@@ -83,24 +87,96 @@
         <div class="row p-5">
             <table class="table">
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido</th>
-                    <th scope="col">Estado</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Estado</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
                 </tbody>
-              </table>
-            
+            </table>
+
         </div>
+        <!-- container chat -->
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col text-end">
+                                <img src="/public/img/robotic.png" alt="">
+                            </div>
+                            <div class="col-11">
+                                <h5 class="card-title">ChatBox</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Active</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col msg-in">
+                                <p class="card-text ">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col msg-out">
+                                <p class="card-text text-end ">With supporting text below as a natural lead-in to
+                                    additional content.</p>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col msg-in">
+                                <p class="card-text ">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col msg-out">
+                                <p class="card-text text-end ">With supporting text below as a natural lead-in to
+                                    additional content.</p>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col msg-out">
+                                <div class="msg-content">
+                                    <p class="card-text text-end ">With supporting text below as a natural lead-in to
+                                        additional content.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="card-footer chatsend p-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Escribe algo..." >
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1"><img src="/public/img/send.svg"  alt=""></span>
+                            </div>                            
+                          </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
     </div>
 
 
@@ -108,7 +184,17 @@
 
 
 
+    <script src="/dist/lex-web-ui-loader.js"></script>
+    <script>
+        var loaderOpts ={
+            baseUrl:"https://d3cxu7rig69db7.cloudfront.net",
+            shouldLoadMinDeps:true
+        };
+        var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+        loader.load()
+            .catch(function(error){console.error})
 
+    </script>
 
 
 
